@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vandy Ahmad Misry Ar Razy — Fullstack Software Engineer</title>
+<meta name="description" content="Fullstack Software Engineer with nearly 7 years of experience in Golang, React, Next.js and TypeScript, building systems for banking, telecommunications, fintech, government and education.">
+<meta property="og:title" content="Vandy Ahmad Misry Ar Razy — Fullstack Software Engineer">
+<meta property="og:description" content="Golang · React · Next.js · TypeScript. Nearly 7 years building production systems for banking, telco, fintech, government and education.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0B0E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2318181B'/%3E%3Ctext x='16' y='21.5' text-anchor='middle' font-family='Arial' font-weight='700' font-size='14' fill='%23fff'%3EVA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Vandy Ahmad Misry Ar Razy","jobTitle":"Fullstack Software Engineer","email":"mailto:vandyahmad2404@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Banjarnegara","addressRegion":"Central Java","addressCountry":"ID"},"alumniOf":"Institut Teknologi Telkom Purwokerto","worksFor":{"@type":"Organization","name":"PT Aplikanusa Lintasarta"},"sameAs":["https://github.com/vandyahmad24","https://arrazyinovasi.com/portofolio"]}
+</script>
+<style>
+:root{
+  --bg:#FAFAFA; --surface:#FFFFFF; --fg:#09090B; --fg-2:#3F3F46; --fg-3:#5B5B66;
+  --border:#E4E4E7; --muted:#F1F2F4; --accent:#2563EB; --accent-soft:#EEF3FF; --accent-fg:#1D4ED8;
+  --primary:#18181B; --on-primary:#FFFFFF;
+  --shadow:0 1px 2px rgba(9,9,11,.04),0 8px 24px -12px rgba(9,9,11,.12);
+  --ease-enter:cubic-bezier(.22,1,.36,1); --ease-move:cubic-bezier(.25,1,.5,1);
+  --radius:14px; --max:1120px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0B0E; --surface:#131318; --fg:#F4F4F5; --fg-2:#C4C4CC; --fg-3:#9A9AA6;
+    --border:#26262D; --muted:#1A1A20; --accent:#6B9BFF; --accent-soft:#16203A; --accent-fg:#8FB3FF;
+    --primary:#F4F4F5; --on-primary:#0B0B0E;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B0B0E; --surface:#131318; --fg:#F4F4F5; --fg-2:#C4C4CC; --fg-3:#9A9AA6;
+  --border:#26262D; --muted:#1A1A20; --accent:#6B9BFF; --accent-soft:#16203A; --accent-fg:#8FB3FF;
+  --primary:#F4F4F5; --on-primary:#0B0B0E;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+[data-theme-switching] *{transition:none!important}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.15;letter-spacing:-.02em;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:16px;top:-48px;background:var(--primary);color:var(--on-primary);padding:10px 14px;border-radius:8px;z-index:100;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+@media (min-width:768px){.wrap{padding:0 32px}}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.icon{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* Header */
+.header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.6) blur(12px);-webkit-backdrop-filter:saturate(1.6) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s ease}
+.header.scrolled{border-bottom-color:var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Space Grotesk";font-weight:600}
+.brand-mark{width:32px;height:32px;border-radius:9px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;font-size:13px;font-weight:700;letter-spacing:.02em}
+.nav-links{display:none;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--fg-3);font-size:15px;transition:color .2s ease,background-color .2s ease}
+.nav-links a:hover{color:var(--fg);background:var(--muted)}
+.nav-links a[aria-current="true"]{color:var(--fg);background:var(--muted)}
+@media (min-width:900px){.nav-links{display:flex}}
+.nav-actions{display:flex;gap:8px;align-items:center}
+.icon-btn{width:44px;height:44px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--fg);cursor:pointer;transition:background-color .2s ease,transform .16s var(--ease-enter)}
+.icon-btn:hover{background:var(--muted)}
+.icon-btn:active{transform:scale(.96)}
+.theme-icon-sun{display:none}
+:root[data-theme="dark"] .theme-icon-sun{display:block}
+:root[data-theme="dark"] .theme-icon-moon{display:none}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:10px;font-weight:500;font-size:15px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background-color .2s ease,border-color .2s ease,transform .16s var(--ease-enter),box-shadow .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--primary);color:var(--on-primary)}
+.btn-primary:hover{box-shadow:0 6px 20px -8px color-mix(in srgb,var(--primary) 60%,transparent)}
+.btn-ghost{border-color:var(--border);background:var(--surface);color:var(--fg)}
+.btn-ghost:hover{background:var(--muted)}
+.btn .icon{width:17px;height:17px}
+
+/* Hero */
+.hero{padding:72px 0 56px;position:relative;overflow:hidden}
+@media (min-width:768px){.hero{padding:112px 0 88px}}
+.hero-grid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 75%);opacity:.55}
+.status{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 10px;border:1px solid var(--border);background:var(--surface);border-radius:999px;font-size:13.5px;color:var(--fg-2)}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 0 rgba(22,163,74,.5);animation:pulse 2.4s var(--ease-enter) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.45)}70%,100%{box-shadow:0 0 0 8px rgba(22,163,74,0)}}
+.hero h1{font-size:clamp(2.4rem,6.4vw,4.4rem);font-weight:700;margin-top:24px;max-width:15ch}
+.hero h1 .accent{color:var(--accent)}
+.hero-role{margin-top:16px;font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--fg-2);max-width:56ch}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;color:var(--fg-3);font-size:15px}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
+.hero-meta .icon{width:16px;height:16px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:56px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+@media (min-width:768px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--surface);padding:20px}
+.stat b{display:block;font-family:"Space Grotesk";font-size:clamp(1.6rem,3.4vw,2.1rem);font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--fg-3)}
+
+/* Sections */
+section[id]{scroll-margin-top:80px}
+.section{padding:72px 0;border-top:1px solid var(--border)}
+@media (min-width:768px){.section{padding:96px 0}}
+.section-head{display:grid;gap:12px;margin-bottom:40px}
+@media (min-width:900px){.section-head{grid-template-columns:240px 1fr;gap:32px;align-items:baseline}}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent-fg);letter-spacing:.02em}
+.section-head h2{font-size:clamp(1.75rem,3.6vw,2.4rem);font-weight:600}
+.lede{font-size:clamp(1.05rem,1.8vw,1.2rem);color:var(--fg-2);max-width:68ch;line-height:1.7}
+.split{display:grid;gap:16px}
+@media (min-width:900px){.split{grid-template-columns:240px 1fr;gap:32px}}
+
+/* About */
+.about-points{display:grid;gap:12px;margin-top:28px}
+@media (min-width:640px){.about-points{grid-template-columns:repeat(3,1fr)}}
+.point{padding:18px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.point .icon{color:var(--accent);width:20px;height:20px}
+.point h3{font-size:16px;font-weight:600;margin-top:12px}
+.point p{font-size:14.5px;color:var(--fg-3);margin-top:4px;line-height:1.55}
+
+/* Experience */
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1px;background:var(--border)}
+.job{position:relative;padding-left:32px;padding-bottom:36px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:0;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--fg-3)}
+.job.current::before{border-color:var(--accent);background:var(--accent)}
+.job-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;align-items:baseline}
+.job h3{font-size:clamp(1.1rem,2vw,1.25rem);font-weight:600}
+.job .period{font-size:13.5px;color:var(--fg-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.job .org{color:var(--fg-2);font-weight:500;margin-top:2px}
+.job .tag{display:inline-block;font-size:12px;font-weight:500;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent-fg);margin-left:6px;vertical-align:2px}
+.job ul{margin:12px 0 0;padding-left:18px;color:var(--fg-2);font-size:15.5px}
+.job li{margin-top:6px}
+.job li::marker{color:var(--fg-3)}
+
+/* Projects */
+.projects{display:grid;gap:16px}
+@media (min-width:768px){.projects{grid-template-columns:repeat(2,1fr)}}
+.card{position:relative;display:flex;flex-direction:column;padding:24px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);transition:border-color .2s ease,box-shadow .3s var(--ease-enter),transform .3s var(--ease-enter)}
+@media (hover:hover) and (pointer:fine){
+  .card:hover{border-color:color-mix(in srgb,var(--accent) 40%,var(--border));box-shadow:var(--shadow);transform:translateY(-3px)}
+  .card:hover .card-arrow{transform:translate(2px,-2px);color:var(--accent)}
+}
+.card.featured{grid-column:1/-1}
+@media (min-width:768px){.card.featured{padding:32px}}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.card-kind{font-size:12.5px;color:var(--fg-3);font-family:"JetBrains Mono",monospace}
+.card h3{font-size:clamp(1.15rem,2vw,1.35rem);font-weight:600;margin-top:6px}
+.card h3 a{text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0;border-radius:var(--radius)}
+.card-arrow{color:var(--fg-3);transition:transform .25s var(--ease-enter),color .2s ease}
+.card p{color:var(--fg-2);font-size:15.5px;margin-top:10px}
+.card ul{margin:10px 0 0;padding-left:18px;color:var(--fg-2);font-size:15px}
+.card li{margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
+.chip{font-family:"JetBrains Mono",monospace;font-size:12px;padding:3px 9px;border-radius:6px;background:var(--muted);color:var(--fg-2);border:1px solid var(--border)}
+.others{margin-top:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.others h3{font-size:16px;font-weight:600;padding:18px 24px;border-bottom:1px solid var(--border)}
+.others ul{list-style:none;margin:0;padding:0}
+.others li{display:grid;gap:2px 16px;padding:14px 24px;border-bottom:1px solid var(--border);font-size:15px}
+.others li:last-child{border-bottom:0}
+@media (min-width:768px){.others li{grid-template-columns:minmax(220px,1fr) 2fr}}
+.others b{font-weight:600}
+.others span{color:var(--fg-3)}
+
+/* Skills */
+.skills{display:grid;gap:12px}
+@media (min-width:640px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.skills{grid-template-columns:repeat(3,1fr)}}
+.skill{padding:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.skill h3{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600}
+.skill h3 .icon{color:var(--accent)}
+.skill .chips{padding-top:12px}
+
+/* Education */
+.edu{display:grid;gap:12px}
+@media (min-width:768px){.edu{grid-template-columns:1fr 1fr}}
+.edu-card{padding:24px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+.edu-card .card-kind{display:block}
+.edu-card h3{font-size:1.15rem;font-weight:600;margin-top:8px}
+.edu-card p{color:var(--fg-2);margin-top:6px;font-size:15px}
+
+/* Contact */
+.contact{padding:88px 0;border-top:1px solid var(--border)}
+.contact-box{padding:32px 24px;border-radius:20px;background:var(--primary);color:var(--on-primary);position:relative;overflow:hidden}
+@media (min-width:768px){.contact-box{padding:56px}}
+.contact-box h2{font-size:clamp(1.8rem,4.4vw,3rem);font-weight:600;max-width:18ch}
+.contact-box p{opacity:.78;margin-top:14px;max-width:52ch;font-size:1.05rem}
+.contact-links{display:grid;gap:10px;margin-top:32px}
+@media (min-width:768px){.contact-links{grid-template-columns:repeat(2,1fr)}}
+.contact-link{display:flex;align-items:center;gap:14px;padding:14px 16px;min-height:56px;border-radius:12px;text-decoration:none;border:1px solid color-mix(in srgb,var(--on-primary) 18%,transparent);transition:background-color .2s ease,border-color .2s ease}
+.contact-link:hover{background:color-mix(in srgb,var(--on-primary) 8%,transparent);border-color:color-mix(in srgb,var(--on-primary) 32%,transparent)}
+.contact-link small{display:block;opacity:.66;font-size:12.5px}
+.contact-link .val{font-weight:500;overflow-wrap:anywhere}
+.contact-link .icon{width:20px;height:20px;opacity:.85}
+.contact-link .go{margin-left:auto;opacity:.5;transition:transform .2s var(--ease-enter),opacity .2s ease}
+.contact-link:hover .go{transform:translate(2px,-2px);opacity:.9}
+footer{padding:28px 0 40px;color:var(--fg-3);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{color:var(--fg-2)}
+
+/* Motion: scroll reveal (only when JS + motion allowed) */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease-enter),transform .7s var(--ease-enter);transition-delay:var(--d,0ms)}
+.js .reveal.in{opacity:1;transform:none}
+.js .hero-in{opacity:0;transform:translateY(12px);animation:rise .8s var(--ease-enter) forwards;animation-delay:var(--d,0ms)}
+@keyframes rise{to{opacity:1;transform:none}}
+.progress{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0);z-index:50}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal,.js .hero-in{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+  .status-dot{animation:none}
+  .card,.btn,.icon-btn{transition:none}
+  .progress{display:none}
+}
+@media print{
+  .header,.progress,.hero-grid,.hero-cta,.nav-actions{display:none!important}
+  .js .reveal,.js .hero-in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.1-1.3-.3-2.5-1-3.5.3-1.2.3-2.4 0-3.5 0 0-1 0-3 1.5-2.6-.5-5.4-.5-8 0C6 2 5 2 5 2c-.3 1.1-.3 2.3 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.4.5-.7 1-.8 1.6-.2.6-.3 1.2-.2 1.9v4"/><path d="M9 18c-4.5 2-5-2-7-2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+  <symbol id="i-phone2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.7 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1Z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="Vandy Ahmad, home"><span class="brand-mark">VA</span><span>Vandy Ahmad</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle dark mode">
+        <svg class="icon theme-icon-moon"><use href="#i-moon"/></svg>
+        <svg class="icon theme-icon-sun"><use href="#i-sun"/></svg>
+      </button>
+      <a class="btn btn-primary" href="CV_Vandy_Ahmad_Misry_Ar_Razy.pdf" download><svg class="icon"><use href="#i-download"/></svg><span>CV</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="status hero-in" style="--d:0ms"><span class="status-dot" aria-hidden="true"></span>Open to remote opportunities</span>
+      <h1 class="hero-in" style="--d:80ms">Vandy Ahmad Misry <span class="accent">Ar Razy</span></h1>
+      <p class="hero-role hero-in" style="--d:160ms">Fullstack Software Engineer building production systems with <strong>Golang</strong>, <strong>React</strong>, <strong>Next.js</strong> and <strong>TypeScript</strong> — from database design to deployment.</p>
+      <div class="hero-meta hero-in" style="--d:220ms">
+        <span><svg class="icon"><use href="#i-map"/></svg>Banjarnegara, Central Java, Indonesia</span>
+        <span><svg class="icon"><use href="#i-globe"/></svg>Remote-friendly</span>
+      </div>
+      <div class="hero-cta hero-in" style="--d:280ms">
+        <a class="btn btn-primary" href="#contact"><svg class="icon"><use href="#i-mail"/></svg>Get in touch</a>
+        <a class="btn btn-ghost" href="CV_Vandy_Ahmad_Misry_Ar_Razy.pdf" download><svg class="icon"><use href="#i-download"/></svg>Download CV (PDF)</a>
+        <a class="btn btn-ghost" href="https://github.com/vandyahmad24" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg>GitHub</a>
+      </div>
+      <dl class="stats hero-in" style="--d:340ms">
+        <div class="stat"><dt><b data-count="7">~7</b></dt><dd style="margin:0"><span>Years of experience</span></dd></div>
+        <div class="stat"><dt><b data-count="14">14</b></dt><dd style="margin:0"><span>Production projects shipped</span></dd></div>
+        <div class="stat"><dt><b>5</b></dt><dd style="margin:0"><span>Industries: banking, telco, fintech, gov, edu</span></dd></div>
+        <div class="stat"><dt><b>Full</b></dt><dd style="margin:0"><span>Lifecycle: DB → API → UI → CI/CD</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-h">
+    <div class="wrap split">
+      <div class="reveal"><p class="eyebrow">01 — About</p></div>
+      <div>
+        <h2 id="about-h" class="reveal" style="font-size:clamp(1.75rem,3.6vw,2.4rem);font-weight:600">Engineering reliable systems for regulated, high-traffic domains.</h2>
+        <p class="lede reveal" style="margin-top:18px">Fullstack Software Engineer with nearly 7 years of experience building web, mobile, and backend systems for banking, telecommunications, fintech, government, and education. Strong in Golang (Gin, Fiber, gRPC) and React/Next.js with TypeScript, with hands-on experience in NestJS, PostgreSQL, Docker, and CI/CD.</p>
+        <p class="lede reveal" style="margin-top:14px">I have designed and shipped multi-tenant SaaS platforms, payment integrations, AI-powered applications, and real-time systems — and I work closely with QA, UI/UX, and product teams.</p>
+        <div class="about-points">
+          <div class="point reveal" style="--d:0ms"><svg class="icon"><use href="#i-server"/></svg><h3>Backend at scale</h3><p>Go microservices, gRPC, WebSocket and concurrency patterns for throughput.</p></div>
+          <div class="point reveal" style="--d:60ms"><svg class="icon"><use href="#i-layers"/></svg><h3>SaaS architecture</h3><p>Multi-tenant isolation, payments, credits and automated per-tenant migrations.</p></div>
+          <div class="point reveal" style="--d:120ms"><svg class="icon"><use href="#i-users"/></svg><h3>End-to-end ownership</h3><p>Requirements, schema, API, UI, CI/CD, deployment and maintenance.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="exp-h">
+    <div class="wrap split">
+      <div class="reveal"><p class="eyebrow">02 — Experience</p><h2 id="exp-h" style="font-size:clamp(1.75rem,3.6vw,2.4rem);font-weight:600;margin-top:12px">Work history</h2></div>
+      <ol class="timeline">
+        <li class="job current reveal">
+          <div class="job-top"><h3>Staff Fullstack Developer <span class="tag">Current</span></h3><span class="period mono">Jan 2023 — Present</span></div>
+          <p class="org">PT Aplikanusa Lintasarta · Golang &amp; React</p>
+          <ul>
+            <li>Build RESTful APIs with Golang (Gin), gRPC for service-to-service communication, and WebSocket for real-time features in a microservices architecture.</li>
+            <li>Use goroutines and concurrency patterns to improve throughput and scalability of backend services.</li>
+            <li>Develop frontend applications with React, Next.js, and TypeScript, using server-side rendering for better performance and SEO.</li>
+            <li>Build reusable UI components integrated with backend APIs for a consistent experience across products.</li>
+          </ul>
+        </li>
+        <li class="job current reveal">
+          <div class="job-top"><h3>Founder &amp; Lead Software Engineer <span class="tag">Part-time</span></h3><span class="period mono">2024 — Present</span></div>
+          <p class="org">Arrazy Inovasi Teknologi · Software house</p>
+          <ul>
+            <li>Design, build, and deploy end-to-end systems for clients in education, cooperatives, retail, events, and healthcare distribution, plus in-house SaaS products.</li>
+            <li>Own the full lifecycle: requirements, database design, backend and frontend development, CI/CD, deployment, and maintenance.</li>
+            <li>Delivered 14 production projects, including a multi-tenant school SaaS, an AI curriculum generator, a cooperative accounting system, and AI-powered CRM tools.</li>
+          </ul>
+        </li>
+        <li class="job reveal">
+          <div class="job-top"><h3>Staff Fullstack Developer</h3><span class="period mono">Nov 2021 — Jan 2023</span></div>
+          <p class="org">PT Bank Rakyat Indonesia (Persero) Tbk · Golang &amp; React</p>
+          <ul>
+            <li>Developed core banking transaction modules for Foreign Exchange, Current Account, Savings Account, and Overdraft using Golang.</li>
+            <li>Built responsive teller interfaces with React, Next.js, and TypeScript on top of complex transaction logic.</li>
+            <li>Integrated real-time transaction status via WebSocket and REST so tellers receive live feedback during operations.</li>
+          </ul>
+        </li>
+        <li class="job reveal">
+          <div class="job-top"><h3>Backend Developer</h3><span class="period mono">Aug 2020 — Aug 2021</span></div>
+          <p class="org">CV. Assalam Teknologi · PHP</p>
+          <ul>
+            <li>Developed and maintained SIPD (Regional Government Information System) for DKI Jakarta, DI Yogyakarta, and other provinces.</li>
+            <li>Built features with Phalcon, Laravel, React, jQuery, and Docker, keeping the system stable, secure, and scalable across regions.</li>
+          </ul>
+        </li>
+        <li class="job reveal">
+          <div class="job-top"><h3>Backend Developer</h3><span class="period mono">Nov 2019 — Aug 2020</span></div>
+          <p class="org">PT Lunaria Annua Teknologi (KoinWorks) · PHP</p>
+          <ul>
+            <li>Developed and maintained the back-office admin system of the KoinWorks super app.</li>
+            <li>Worked with Laravel, PostgreSQL, and API integrations in a microservices environment.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="projects" aria-labelledby="proj-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 — Selected projects</p>
+        <h2 id="proj-h">Systems shipped to production</h2>
+      </div>
+      <div class="projects">
+        <article class="card featured reveal">
+          <div class="card-top"><div><span class="card-kind">Multi-tenant SaaS · lentra.id</span><h3><a href="https://lentra.id" target="_blank" rel="noopener">Lentra — School SaaS Platform</a></h3></div><svg class="icon card-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+          <p>Schools self-register, pay, choose a subdomain, and go live in minutes with a website and admin system.</p>
+          <ul>
+            <li>Schema-per-tenant isolation in PostgreSQL with transaction-scoped <code class="mono">search_path</code> so connection pooling cannot leak tenant data.</li>
+            <li>Admissions, tuition, RFID/QR attendance, grading, report cards, automatic per-tenant migrations, on-demand TLS, and E2E tests.</li>
+          </ul>
+          <div class="chips"><span class="chip">NestJS</span><span class="chip">Next.js 15</span><span class="chip">React 19</span><span class="chip">PostgreSQL</span><span class="chip">Drizzle</span><span class="chip">Docker</span><span class="chip">Caddy</span><span class="chip">Playwright</span><span class="chip">GitHub Actions</span></div>
+        </article>
+        <article class="card reveal" style="--d:0ms">
+          <div class="card-top"><div><span class="card-kind">AI · EdTech</span><h3>Kurikulum Otomatis</h3></div></div>
+          <p>AI tool generating complete teaching documents for grades 1–12, exported to PDF and Word.</p>
+          <ul>
+            <li>Restart-safe async pipeline with model rotation, retry, and provider fallback.</li>
+            <li>Credit system with auto refunds, idempotent QRIS callbacks, real-time notifications, Google login.</li>
+          </ul>
+          <div class="chips"><span class="chip">Next.js 14</span><span class="chip">Express</span><span class="chip">Prisma</span><span class="chip">OpenRouter</span><span class="chip">Puppeteer</span><span class="chip">QRIS</span></div>
+        </article>
+        <article class="card reveal" style="--d:60ms">
+          <div class="card-top"><div><span class="card-kind">Accounting · Cooperative</span><h3>Koperasi Dwija Usaha</h3></div></div>
+          <p>One platform for three business units — trading, palm oil purchasing, savings &amp; loans — with automatic double-entry journals.</p>
+          <ul>
+            <li>Tiered loan approvals, installment schedules, trial balance, role-based dashboards, audit trail.</li>
+          </ul>
+          <div class="chips"><span class="chip">Nuxt 3</span><span class="chip">NestJS</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">RBAC</span></div>
+        </article>
+        <article class="card reveal" style="--d:0ms">
+          <div class="card-top"><div><span class="card-kind">AI · CRM</span><h3>ALIQA AI Assistant &amp; Zaherba CRM</h3></div></div>
+          <p>WhatsApp AI chatbot answering from an editable knowledge base and internal SOPs, integrated with orders.</p>
+          <ul>
+            <li>CRM dashboard for chats, orders, purchasing, and automatic shipping receipts via WhatsApp.</li>
+          </ul>
+          <div class="chips"><span class="chip">Go (Fiber)</span><span class="chip">GORM</span><span class="chip">Redis</span><span class="chip">Next.js 15</span><span class="chip">React Native</span><span class="chip">LLM</span></div>
+        </article>
+        <article class="card reveal" style="--d:60ms">
+          <div class="card-top"><div><span class="card-kind">AI infra · viberouter.id</span><h3><a href="https://viberouter.id" target="_blank" rel="noopener">VibeRouter</a></h3></div><svg class="icon card-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+          <p>24/7 AI request router with multi-client API key management, usage tracking, and access control for Claude Code, Codex, and Cursor.</p>
+          <div class="chips"><span class="chip">Next.js</span><span class="chip">Express</span><span class="chip">Go (Fiber)</span><span class="chip">MongoDB</span><span class="chip">MySQL</span></div>
+        </article>
+        <article class="card reveal" style="--d:0ms">
+          <div class="card-top"><div><span class="card-kind">Mobile · Operations</span><h3>Mitra Infinite</h3></div></div>
+          <p>Mobile app and admin dashboard for event organizers: orders, service packages, warehouse stock, stock opname, and daily cash flow.</p>
+          <div class="chips"><span class="chip">Flutter</span><span class="chip">Go (Gin)</span><span class="chip">PostgreSQL</span><span class="chip">AWS S3</span></div>
+        </article>
+        <article class="card reveal" style="--d:60ms">
+          <div class="card-top"><div><span class="card-kind">Education · Management</span><h3>SIM-Pesantren Al-Muttaqin</h3></div></div>
+          <p>Operations dashboard, Quran memorization logs, barcode gate permits, cashless canteen with virtual accounts, and a clinic module with RBAC.</p>
+          <div class="chips"><span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Prisma</span><span class="chip">Expo</span></div>
+        </article>
+      </div>
+      <div class="others reveal">
+        <h3>Other projects</h3>
+        <ul>
+          <li><b>Hafiz Indonesia Emas</b><span>National certification registration with admin verification and CMS — Vue 3, Golang, MySQL</span></li>
+          <li><b>B.Night Run Party</b><span>Marathon registration with quota queue, traffic-spike handling, auto certificates — Astro SSR, payment gateway</span></li>
+          <li><b>Sonar Gorden 4444</b><span>Product catalog with full CMS and landing page editor — Next.js 16, Drizzle, PostgreSQL</span></li>
+          <li><b>SMK Sekar Bumi Nusantara</b><span>School website, school management system, and LMS</span></li>
+          <li><b>PT Mito Adhiguna Kencana</b><span>Medical equipment e-commerce catalog with advanced filters and SEO — Vue.js</span></li>
+          <li><b>Redcode by United Tractors</b><span>Workplace safety app with emergency alerts and real-time notifications — Flutter, NestJS, Next.js</span></li>
+          <li><b>RT Pintar &amp; Koperasi Syariah AHM</b><span>Community billing and sharia cooperative apps — React Native, Flutter, Laravel Nova</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills" aria-labelledby="skills-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 — Skills</p>
+        <h2 id="skills-h">Technical toolkit</h2>
+      </div>
+      <div class="skills">
+        <div class="skill reveal" style="--d:0ms"><h3><svg class="icon"><use href="#i-code"/></svg>Languages</h3><div class="chips"><span class="chip">Go</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">Dart</span><span class="chip">SQL</span></div></div>
+        <div class="skill reveal" style="--d:40ms"><h3><svg class="icon"><use href="#i-server"/></svg>Backend</h3><div class="chips"><span class="chip">Gin</span><span class="chip">Fiber</span><span class="chip">gRPC</span><span class="chip">WebSocket</span><span class="chip">NestJS</span><span class="chip">Express</span><span class="chip">Laravel</span><span class="chip">Phalcon</span><span class="chip">Microservices</span><span class="chip">GORM</span><span class="chip">Prisma</span><span class="chip">Drizzle</span></div></div>
+        <div class="skill reveal" style="--d:80ms"><h3><svg class="icon"><use href="#i-layout"/></svg>Frontend</h3><div class="chips"><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Vue 3</span><span class="chip">Nuxt 3</span><span class="chip">Tailwind CSS</span><span class="chip">SSR</span><span class="chip">Astro</span></div></div>
+        <div class="skill reveal" style="--d:0ms"><h3><svg class="icon"><use href="#i-phone2"/></svg>Mobile</h3><div class="chips"><span class="chip">Flutter</span><span class="chip">React Native (Expo)</span></div></div>
+        <div class="skill reveal" style="--d:40ms"><h3><svg class="icon"><use href="#i-db"/></svg>Databases</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">MongoDB</span><span class="chip">Firestore</span></div></div>
+        <div class="skill reveal" style="--d:80ms"><h3><svg class="icon"><use href="#i-cloud"/></svg>Cloud &amp; DevOps</h3><div class="chips"><span class="chip">Docker</span><span class="chip">Compose</span><span class="chip">GitHub Actions</span><span class="chip">Ansible</span><span class="chip">Caddy</span><span class="chip">AWS S3</span><span class="chip">Cloudflare</span><span class="chip">Linux</span></div></div>
+        <div class="skill reveal" style="--d:0ms"><h3><svg class="icon"><use href="#i-shield"/></svg>Auth &amp; Security</h3><div class="chips"><span class="chip">JWT</span><span class="chip">OAuth 2.0</span><span class="chip">RBAC</span><span class="chip">Audit trail</span></div></div>
+        <div class="skill reveal" style="--d:40ms"><h3><svg class="icon"><use href="#i-check"/></svg>Testing &amp; Docs</h3><div class="chips"><span class="chip">Playwright E2E</span><span class="chip">Swagger / OpenAPI</span></div></div>
+        <div class="skill reveal" style="--d:80ms"><h3><svg class="icon"><use href="#i-plug"/></svg>Integrations</h3><div class="chips"><span class="chip">QRIS</span><span class="chip">Midtrans</span><span class="chip">WhatsApp API</span><span class="chip">OpenRouter LLM</span><span class="chip">Puppeteer PDF</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education" aria-labelledby="edu-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">05 — Education &amp; languages</p>
+        <h2 id="edu-h">Background</h2>
+      </div>
+      <div class="edu">
+        <div class="edu-card reveal"><span class="card-kind">2016 — 2021 · GPA 3.10 / 4.00</span><h3>Bachelor of Informatics Engineering</h3><p>Institut Teknologi Telkom Purwokerto</p></div>
+        <div class="edu-card reveal" style="--d:60ms"><span class="card-kind">Languages</span><h3>Indonesian &amp; English</h3><p>Indonesian (native) · English (intermediate — reads and works from technical documentation)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="contact-box reveal">
+        <h2 id="contact-h">Let’s build something reliable together.</h2>
+        <p>Open to fullstack and backend roles, remote collaborations, and project engagements.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:vandyahmad2404@gmail.com"><svg class="icon"><use href="#i-mail"/></svg><span><small>Email</small><span class="val">vandyahmad2404@gmail.com</span></span><svg class="icon go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="contact-link" href="https://wa.me/6285156645724" target="_blank" rel="noopener"><svg class="icon"><use href="#i-phone"/></svg><span><small>Phone / WhatsApp</small><span class="val">+62 851-5664-5724</span></span><svg class="icon go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="contact-link" href="https://github.com/vandyahmad24" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg><span><small>GitHub</small><span class="val">github.com/vandyahmad24</span></span><svg class="icon go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="contact-link" href="https://arrazyinovasi.com/portofolio" target="_blank" rel="noopener"><svg class="icon"><use href="#i-globe"/></svg><span><small>Portfolio</small><span class="val">arrazyinovasi.com/portofolio</span></span><svg class="icon go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Vandy Ahmad Misry Ar Razy</span>
+    <a href="CV_Vandy_Ahmad_Misry_Ar_Razy.pdf" download>Download CV (PDF)</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Theme toggle (transitions disabled during switch to avoid a colour sweep)
+  var btn=document.getElementById('theme');
+  function isDark(){return root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+  function sync(){root.dataset.theme=isDark()?'dark':'light';btn.setAttribute('aria-pressed',String(isDark()))}
+  sync();
+  btn.addEventListener('click',function(){
+    root.setAttribute('data-theme-switching','');
+    root.dataset.theme=isDark()?'light':'dark';
+    btn.setAttribute('aria-pressed',String(isDark()));
+    try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}
+    requestAnimationFrame(function(){requestAnimationFrame(function(){root.removeAttribute('data-theme-switching')})});
+  });
+
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal
+  var els=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // Header border, progress bar, active nav link
+  var header=document.querySelector('.header'),bar=document.querySelector('.progress');
+  var links=[].slice.call(document.querySelectorAll('.nav-links a'));
+  var sections=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  var ticking=false;
+  function onScroll(){
+    var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    header.classList.toggle('scrolled',y>8);
+    if(!reduce)bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+    var cur=-1;sections.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*.35)cur=i});
+    links.forEach(function(a,i){if(i===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    ticking=false;
+  }
+  addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+  onScroll();
+
+  // Count-up for numeric stats
+  if(!reduce){
+    document.querySelectorAll('[data-count]').forEach(function(el){
+      var end=+el.dataset.count,prefix=el.textContent.charAt(0)==='~'?'~':'',t0=null,dur=900;
+      el.textContent=prefix+'0';
+      function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=prefix+Math.round(end*e);if(p<1)requestAnimationFrame(step)}
+      setTimeout(function(){requestAnimationFrame(step)},400);
+    });
+  }
+})();
+</script>
+</body>
+</html>
